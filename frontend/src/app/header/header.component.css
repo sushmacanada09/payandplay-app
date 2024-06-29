@@ -1,0 +1,19 @@
+.container-header{
+    display: flex;
+     min-width: 100%;
+     background-color: #008B8B;
+     min-height: 50px;
+     align-items: center;
+ }
+.logo{
+    flex:70%
+}
+.login{
+    flex:10%;
+}
+.sign-up{
+    flex:10%;
+}
+.about{
+    flex:10%;
+}
