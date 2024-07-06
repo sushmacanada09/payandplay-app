@@ -17,3 +17,23 @@
 .about{
     flex:10%;
 }
+logo{
+    flex:70%
+}
+.logout{
+    flex:5%;
+}
+.data-plan{
+    flex:5%;
+}
+.clothing{
+    flex:5%;
+}
+.add-cart{
+    flex:5%;  
+}
+.logo-img{
+    height: 36px;
+    margin-left: 25px;
+    margin-top: 5px;
+}

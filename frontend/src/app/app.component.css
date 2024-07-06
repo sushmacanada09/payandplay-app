@@ -5,8 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: url('../assets/login-back.jpg') no-repeat center center fixed;
-    background-size: cover;
+    
 }
 .footer-postion{
     margin-top: auto;
@@ -17,3 +16,10 @@
     overflow: auto;
     
 }
+.login-background {
+    background-image: url('../assets/login-back.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
