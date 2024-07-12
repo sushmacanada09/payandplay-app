@@ -12,4 +12,7 @@ export class HeaderComponent {
   isLoginPage(): boolean {
     return this.router.url === '/login'; // Adjust the URL as needed for your login route
   }
+  moveToLoginPage(){
+    this.router.navigate(['login']);
+  }
 }

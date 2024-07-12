@@ -2,15 +2,30 @@
     <div class="login-box">
       <h2>Login</h2>
       <p>Have an account?</p>
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="input-group">
-          <input type="text" placeholder="Username" required>
+          <input type="text" formControlName="email" class="form-control" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && loginForm.get('email').errors }" />
+                        <div *ngIf="submitted &&  loginForm.get('email')!.errors" class="invalid-feedback">
+                            <div *ngIf="loginForm.get('email')!.hasError('required')">Email is required</div>
+                            <div *ngIf="loginForm.get('email')!.hasError('email')">Email must be a valid email address</div>
+                        </div>
         </div>
         <div class="input-group">
-          <input type="password" placeholder="Password" required>
-          <span class="show-password">👁️</span>
+          
+          <input
+        type="password"
+        id="password"
+        formControlName="password"
+        required
+        placeholder="Password"
+      />
+      <span class="show-password">👁️</span>
+      <div *ngIf="loginForm.get('password')!.invalid && loginForm.get('password')!.touched">
+        <small *ngIf="loginForm.get('password')!.hasError('required')">Password is required.</small>
+      </div>
+          
         </div>
-        <button type="submit" class="btn btn-signin" (click)="navigateToHome()">SIGN IN</button>
+        <button type="submit" class="btn btn-signin" (click)="onSubmit()">SIGN IN</button>
         <div class="additional-options">
           <label><input type="checkbox"> Remember Me</label>
           <a href="#">Forgot Password</a>
